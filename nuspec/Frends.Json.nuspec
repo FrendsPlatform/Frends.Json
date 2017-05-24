@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Frends.Json</id>
+    <version>1.0.0.0</version>
+    <title>FRENDS Json tasks</title>
+    <authors>HiQ Finland</authors>
+    <owners />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>FRENDS Json tasks</description>
+    <summary />
+    <dependencies>
+	    <dependency id="Frends.Tasks.Attributes" version="1.2.0" />
+      <dependency id="Newtonsoft.Json" version="6.0.8" />
+      <dependency id="Newtonsoft.Json.Schema" version="2.0.8" />
+      <dependency id="Handlebars.Net" version="[1.7.1]" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" />
+      <frameworkAssembly assemblyName="System.Data" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+	<file src="Frends.Json\bin\Release\Frends.Json.dll" target="lib\net452\Frends.Json.dll" />	
+    <file src="Frends.Json\bin\Release\Frends.Json.XML" target="Frends.Json.XML"/>
+    <file src="Frends.Json\FrendsTaskMetadata.json" target="FrendsTaskMetadata.json"/>
+  </files>
+</package>

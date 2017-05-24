@@ -1,0 +1,17 @@
+﻿{
+  "Tasks": [
+    {
+      "TaskMethod": "Frends.Json.Json.Query"
+    },{
+      "TaskMethod": "Frends.Json.Json.QuerySingle"
+    },   {
+      "TaskMethod": "Frends.Json.Json.Validate"
+    },   {
+      "TaskMethod": "Frends.Json.Json.Handlebars"
+    },   {
+      "TaskMethod": "Frends.Json.Json.ConvertJsonStringToJToken"
+    },   {
+      "TaskMethod": "Frends.Json.Json.ConvertXmlStringToJToken"
+    }
+  ]
+}
