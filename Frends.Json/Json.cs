@@ -14,7 +14,7 @@ namespace Frends.Json
     public class Json
     {
         /// <summary>
-        /// Query a json string / json token for a single result. See https://bitbucket.org/hiqfinland/frends.json
+        /// Query a json string / json token for a single result. See https://github.com/FrendsPlatform/Frends.Json
         /// </summary>
         /// <returns>JToken</returns>
         public static JToken QuerySingle([CustomDisplay(DisplayOption.Tab)] QueryInput input, [CustomDisplay(DisplayOption.Tab)] QueryOptions options)
@@ -25,7 +25,7 @@ namespace Frends.Json
         }
 
         /// <summary>
-        /// Query a json string / json token. See https://bitbucket.org/hiqfinland/frends.json
+        /// Query a json string / json token. See https://github.com/FrendsPlatform/Frends.Json
         /// </summary>
         /// <returns>JToken[]</returns>
         public static IEnumerable<JToken> Query([CustomDisplay(DisplayOption.Tab)] QueryInput input, [CustomDisplay(DisplayOption.Tab)] QueryOptions options)
@@ -36,7 +36,7 @@ namespace Frends.Json
         }
 
         /// <summary>
-        /// Handlebars provides the power necessary to let you build semantic templates effectively with no frustration. See https://github.com/rexm/Handlebars.Net and https://bitbucket.org/hiqfinland/frends.json
+        /// Handlebars provides the power necessary to let you build semantic templates effectively with no frustration. See https://github.com/rexm/Handlebars.Net and https://github.com/FrendsPlatform/Frends.Json
         /// </summary>
         /// <returns>string</returns>
         public static string Handlebars(HandlebarInput input)
@@ -57,7 +57,7 @@ namespace Frends.Json
         }
 
         /// <summary>
-        /// Validate your json with Json.NET Schema. See http://www.newtonsoft.com/jsonschema and https://bitbucket.org/hiqfinland/frends.json
+        /// Validate your json with Json.NET Schema. See http://www.newtonsoft.com/jsonschema and https://github.com/FrendsPlatform/Frends.Json
         /// </summary>
         /// <returns>Object { bool IsValid, string Error }</returns>
         public static ValidateResult Validate([CustomDisplay(DisplayOption.Tab)]ValidateInput input, [CustomDisplay(DisplayOption.Tab)] ValidateOption options)
