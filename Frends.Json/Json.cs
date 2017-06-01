@@ -17,7 +17,7 @@ namespace Frends.Json
         /// Query a json string / json token for a single result. See https://github.com/FrendsPlatform/Frends.Json
         /// </summary>
         /// <returns>JToken</returns>
-        public static JToken QuerySingle([CustomDisplay(DisplayOption.Tab)] QueryInput input, [CustomDisplay(DisplayOption.Tab)] QueryOptions options)
+        public static object QuerySingle([CustomDisplay(DisplayOption.Tab)] QueryInput input, [CustomDisplay(DisplayOption.Tab)] QueryOptions options)
         {
             JToken jToken = GetJTokenFromInput(input.Json);
            
@@ -28,7 +28,7 @@ namespace Frends.Json
         /// Query a json string / json token. See https://github.com/FrendsPlatform/Frends.Json
         /// </summary>
         /// <returns>JToken[]</returns>
-        public static IEnumerable<JToken> Query([CustomDisplay(DisplayOption.Tab)] QueryInput input, [CustomDisplay(DisplayOption.Tab)] QueryOptions options)
+        public static IEnumerable<object> Query([CustomDisplay(DisplayOption.Tab)] QueryInput input, [CustomDisplay(DisplayOption.Tab)] QueryOptions options)
         {
             JToken jToken = GetJTokenFromInput(input.Json);
 
@@ -78,7 +78,7 @@ namespace Frends.Json
         /// Convert a json string to JToken
         /// </summary>
         /// <returns>JToken</returns>
-        public static JToken ConvertJsonStringToJToken(string json)
+        public static object ConvertJsonStringToJToken(string json)
         {
             return JToken.Parse(json);
         }
@@ -87,7 +87,7 @@ namespace Frends.Json
         /// Convert XML string to JToken
         /// </summary>
         /// <returns>JToken</returns>
-        public static JToken ConvertXmlStringToJToken(string xml)
+        public static object ConvertXmlStringToJToken(string xml)
         {
             var doc = new XmlDocument();
             doc.LoadXml(xml);
@@ -96,7 +96,7 @@ namespace Frends.Json
 
         }
 
-        private static JToken GetJTokenFromInput(dynamic json)
+        private static object GetJTokenFromInput(dynamic json)
         {
             if (json is string)
             {
