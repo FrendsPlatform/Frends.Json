@@ -3,26 +3,12 @@
    - [Building](#building)
    - [Contributing](#contributing)
    - [Documentation](#documentation)
-     - [Json.Query](#json.query)
-       - [Input](#input)
-       - [Options](#options)
-       - [Result](#result)
-     - [Json.QuerySingle](#json.querysingle)
-       - [Input](#input)
-       - [Options](#options)
-       - [Result](#result)
-     - [Json.Handlebars](#json.handlebars)
-       - [Input](#input)
-       - [Result](#result)
-     - [Json.Validate](#json.validate)
-       - [Input](#input)
-       - [Result](#result)
-     - [Json.ConvertXmlStringToJToken](#json.convertxmlstringtojtoken)
-       - [Input](#input)
-       - [Result](#result)
-     - [Json.ConvertJsonStringToJToken](#json.convertjsonstringtojtoken)
-       - [Input](#input)
-       - [Result](#result)
+     - [Json.Query](#jsonquery) 
+     - [Json.QuerySingle](#jsonquerysingle)
+     - [Json.Handlebars](#jsonhandlebars)
+     - [Json.Validate](#jsonvalidate)
+     - [Json.ConvertXmlStringToJToken](#jsonconvertxmlstringtojtoken)
+     - [Json.ConvertJsonStringToJToken](#jsonconvertjsonstringtojtoken)
    - [License](#license)
 
 # Frends.Json
@@ -32,7 +18,6 @@ You can install the task via FRENDS UI Task View or you can find the nuget packa
 `https://www.myget.org/F/frends/api/v2`
 
 ## Building
-Ensure that you have `https://www.myget.org/F/frends/api/v2` added to your nuget feeds
 
 Clone a copy of the repo
 
