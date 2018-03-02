@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Frends.Tasks.Attributes;
+using System.ComponentModel.DataAnnotations;
+
 #pragma warning disable 1591
 
 namespace Frends.Json
@@ -12,7 +13,7 @@ namespace Frends.Json
         /// Json input needs to be of type string or JToken
         /// </summary>
         [DefaultValue("{\"key\":\"value\"}")]
-        [DefaultDisplayType(DisplayType.Json)]
+        [DisplayFormat(DataFormatString = "Json")]
         public dynamic Json { get; set; }
 
         /// <summary>
@@ -36,18 +37,18 @@ namespace Frends.Json
         /// Json input needs to be of type string or JToken
         /// </summary>
         [DefaultValue("{\"title\":\"Mr.\", \"name\":\"Foo\" }")]
-        [DefaultDisplayType(DisplayType.Json)]
+        [DisplayFormat(DataFormatString = "Json")]
         public dynamic Json { get; set; }
 
         /// <summary>
         /// Template for handlebars. > indicates a partial. This needs to be in expression mode. Using {{ }} in other modes breaks the task.
         /// </summary>
         [DefaultValue("\"<xml> {{title}} {{> strongName}} </xml>\"")]
-        [DefaultDisplayType(DisplayType.Expression)]
+        [DisplayFormat(DataFormatString = "Expression")]
         public string HandlebarTemplate { get; set; }
 
         /// <summary>
-        /// Partials for template. 
+        /// Partials for template.
         /// </summary>
         public HandlebarPartial[] HandlebarPartials { get; set; }
     }
@@ -64,7 +65,7 @@ namespace Frends.Json
         /// Partial template. This needs to be in expression mode. Using {{ }} in other modes breaks the task.
         /// </summary>
         [DefaultValue("\"<strong>{{name}}</strong>\"")]
-        [DefaultDisplayType(DisplayType.Expression)]
+        [DisplayFormat(DataFormatString = "Expression")]
         public string Template { get; set; }
     }
 
@@ -74,20 +75,20 @@ namespace Frends.Json
         /// Json input needs to be of type string or JToken
         /// </summary>
         [DefaultValue("{\"name\": \"Foo\"}")]
-        [DefaultDisplayType(DisplayType.Json)]
+        [DisplayFormat(DataFormatString = "Json")]
         public dynamic Json { get; set; }
 
         /// <summary>
         /// Json Schema to validate to. Uses Newtonsoft JsonSchema
         /// </summary>
         [DefaultValue("{\"type\": \"object\", \"properties\": {\"name\": {\"type\":\"string\"} } }")]
-        [DefaultDisplayType(DisplayType.Json)]
+        [DisplayFormat(DataFormatString = "Json")]
         public string JsonSchema { get; set; }
     }
 
     public class ValidateOption
     {
-        public bool ThrowOnInvalidJson { get; set; }        
+        public bool ThrowOnInvalidJson { get; set; }
     }
 
     public class ValidateResult
