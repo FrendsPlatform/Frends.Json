@@ -1,5 +1,5 @@
-﻿using Frends.Tasks.Attributes;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Xml;
@@ -10,17 +10,16 @@ using Newtonsoft.Json.Schema;
 
 namespace Frends.Json
 {
-   
     public class Json
     {
         /// <summary>
         /// Query a json string / json token for a single result. See https://github.com/FrendsPlatform/Frends.Json
         /// </summary>
         /// <returns>JToken</returns>
-        public static object QuerySingle([CustomDisplay(DisplayOption.Tab)] QueryInput input, [CustomDisplay(DisplayOption.Tab)] QueryOptions options)
+        public static object QuerySingle([PropertyTab] QueryInput input, [PropertyTab] QueryOptions options)
         {
             JToken jToken = GetJTokenFromInput(input.Json);
-           
+
             return jToken.SelectToken(input.Query,options.ErrorWhenNotMatched);
         }
 
@@ -28,7 +27,7 @@ namespace Frends.Json
         /// Query a json string / json token. See https://github.com/FrendsPlatform/Frends.Json
         /// </summary>
         /// <returns>JToken[]</returns>
-        public static IEnumerable<object> Query([CustomDisplay(DisplayOption.Tab)] QueryInput input, [CustomDisplay(DisplayOption.Tab)] QueryOptions options)
+        public static IEnumerable<object> Query([PropertyTab] QueryInput input, [PropertyTab] QueryOptions options)
         {
             JToken jToken = GetJTokenFromInput(input.Json);
 
@@ -60,7 +59,7 @@ namespace Frends.Json
         /// Validate your json with Json.NET Schema. See http://www.newtonsoft.com/jsonschema and https://github.com/FrendsPlatform/Frends.Json
         /// </summary>
         /// <returns>Object { bool IsValid, string Error }</returns>
-        public static ValidateResult Validate([CustomDisplay(DisplayOption.Tab)]ValidateInput input, [CustomDisplay(DisplayOption.Tab)] ValidateOption options)
+        public static ValidateResult Validate([PropertyTab]ValidateInput input, [PropertyTab] ValidateOption options)
         {
             var schema = JSchema.Parse(input.JsonSchema);
             JToken jToken = GetJTokenFromInput(input.Json);
