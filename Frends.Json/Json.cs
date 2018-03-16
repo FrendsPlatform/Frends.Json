@@ -61,10 +61,32 @@ namespace Frends.Json
         /// <returns>Object { bool IsValid, string Error }</returns>
         public static ValidateResult Validate([PropertyTab]ValidateInput input, [PropertyTab] ValidateOption options)
         {
-            var schema = JSchema.Parse(input.JsonSchema);
-            JToken jToken = GetJTokenFromInput(input.Json);
-
             IList<string> errors;
+
+            var schema = JSchema.Parse(input.JsonSchema);
+
+            JToken jToken = null;
+            try
+            {
+                jToken = GetJTokenFromInput(input.Json);
+            }
+            catch (System.Exception exception)
+            {
+                if (options.ThrowOnInvalidJson)
+                {
+                    throw;  // re-throw
+                }
+
+                errors = new List<string>();
+                while (exception != null)
+                {
+                    errors.Add(exception.Message);
+                    exception = exception.InnerException;
+                }
+
+                return new ValidateResult() { IsValid = false, Errors = errors };
+            }
+
             var isValid = jToken.IsValid(schema, out errors);
             if (!isValid && options.ThrowOnInvalidJson)
             {
