@@ -6,12 +6,22 @@ using System.Xml;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
+using License = Newtonsoft.Json.Schema.License;
+
 #pragma warning disable 1591
 
 namespace Frends.Json
 {
     public class Json
     {
+        static Json()
+        {
+            if (!string.IsNullOrWhiteSpace(JsonSchemaLicense.License))
+            {
+                License.RegisterLicense(JsonSchemaLicense.License);
+            }
+        }
+
         /// <summary>
         /// Query a json string / json token for a single result. See https://github.com/FrendsPlatform/Frends.Json
         /// </summary>
