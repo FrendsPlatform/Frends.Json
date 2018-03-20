@@ -114,24 +114,36 @@ namespace Frends.Json.Tests
             Assert.That(result, Does.Contain("<span>Mr.</span> <strong>Andersson</strong>"));
         }
 
-        [Test]
-        public void JsonShouldValidate()
-        {
-            const string user = @"{
+        const string ValidUserJson = @"{
               'name': 'Arnie Admin',
               'roles': ['Developer', 'Administrator']
             }";
 
-            const string schema = @"{
+        const string ValidUserSchema = @"{
               'type': 'object',
               'properties': {
                 'name': {'type':'string'},
                 'roles': {'type': 'array'}
               }
             }";
-            var result = Json.Validate(new ValidateInput() {Json = user, JsonSchema = schema } ,new ValidateOption());
+
+        [Test]
+        public void JsonShouldValidate()
+        {
+            var result = Json.Validate(new ValidateInput() {Json = ValidUserJson, JsonSchema = ValidUserSchema } ,new ValidateOption());
             Assert.That(result.IsValid,Is.True);
             Assert.That(result.Errors, Is.Empty);
+        }
+
+        [Test]
+        public void ShouldHaveLicenseSetForExecutingMoreThan1000Validations()
+        {
+            var results = Enumerable.Range(0, 2000).Select(i => Json.Validate(
+                new ValidateInput {Json = ValidUserJson, JsonSchema = ValidUserSchema}, 
+                new ValidateOption()
+                )).ToList();
+
+            Assert.That(results.Select(r => r.IsValid), Is.All.True);
         }
 
         [Test]

@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Definitions.cs" />
     <Compile Include="Json.cs" />
+    <Compile Include="JsonSchemaLicense.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
