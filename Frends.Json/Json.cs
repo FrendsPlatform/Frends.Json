@@ -30,7 +30,7 @@ namespace Frends.Json
         {
             JToken jToken = GetJTokenFromInput(input.Json);
 
-            return jToken.SelectToken(input.Query,options.ErrorWhenNotMatched);
+            return jToken.SelectToken(input.Query, options.ErrorWhenNotMatched);
         }
 
         /// <summary>
@@ -102,7 +102,7 @@ namespace Frends.Json
             {
                 throw new JsonException($"Json is not valid. {string.Join("; ", errors)}");
             }
-            return new ValidateResult() {IsValid = isValid, Errors = errors};
+            return new ValidateResult() { IsValid = isValid, Errors = errors };
         }
 
         /// <summary>

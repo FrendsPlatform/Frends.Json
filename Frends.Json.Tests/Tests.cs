@@ -164,7 +164,7 @@ namespace Frends.Json.Tests
             var result = Json.Validate(new ValidateInput() { Json = user, JsonSchema = schema }, new ValidateOption());
             Assert.That(result.IsValid, Is.False);
             Assert.That(result.Errors.Count, Is.EqualTo(1));
-            Assert.That(result.Errors[0], Is.EqualTo("Invalid type. Expected Object but got Array. Path 'roles', line 3, position 25.") );
+            Assert.That(result.Errors[0], Is.EqualTo("Invalid type. Expected Object but got Array. Path 'roles', line 3, position 24.") );
         }
 
         [Test]
@@ -185,7 +185,7 @@ namespace Frends.Json.Tests
             var result = Json.Validate(new ValidateInput() { Json = user, JsonSchema = schema }, new ValidateOption());
             Assert.That(result.IsValid, Is.False);
             Assert.That(result.Errors.Count, Is.EqualTo(1));
-            Assert.That(result.Errors[0], Is.EqualTo("Unexpected character encountered while parsing value: A. Path 'name', line 2, position 21."));
+            Assert.That(result.Errors[0], Is.EqualTo("Unexpected character encountered while parsing value: A. Path 'name', line 2, position 20."));
         }
 
         [Test]
@@ -204,7 +204,7 @@ namespace Frends.Json.Tests
               }
             }";
             var ex = Assert.Throws<JsonException>(() => Json.Validate(new ValidateInput() { Json = user, JsonSchema = schema }, new ValidateOption() {ThrowOnInvalidJson = true}));
-            Assert.That(ex.Message, Does.Contain("Json is not valid. Invalid type. Expected Object but got Array. Path 'roles', line 3, position 25."));
+            Assert.That(ex.Message, Does.Contain("Json is not valid. Invalid type. Expected Object but got Array. Path 'roles', line 3, position 24."));
 
         }
 
@@ -224,7 +224,7 @@ namespace Frends.Json.Tests
               }
             }";
             var ex = Assert.Throws<JsonReaderException>(() => Json.Validate(new ValidateInput() { Json = user, JsonSchema = schema }, new ValidateOption() { ThrowOnInvalidJson = true }));
-            Assert.That(ex.Message, Does.Contain("Unexpected character encountered while parsing value: A. Path 'name', line 2, position 21."));
+            Assert.That(ex.Message, Does.Contain("Unexpected character encountered while parsing value: A. Path 'name', line 2, position 20."));
         }
 
         [Test]
