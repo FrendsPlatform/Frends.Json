@@ -17,24 +17,25 @@
 You can install the task via FRENDS UI Task view, by searching for packages. You can also download the latest NuGet package from https://www.myget.org/feed/frends/package/nuget/Frends.Json and import it manually via the Task view.
 
 ## Building
+Requirements
+
+`NET Core SDK 2.1 or later`
+
 Clone a copy of the repo
 
 `git clone https://github.com/FrendsPlatform/Frends.Json.git`
 
+Build the solution
 
-Restore dependencies
+`dotnet build`
 
-`nuget restore frends.json`
+Run Tests with xUnit. Tests can be found under
 
-Rebuild the project
-
-Run Tests with nunit3. Tests can be found under
-
-`Frends.Json.Tests\bin\Release\Frends.Json.Tests.dll`
+`Frends.Json.Test\bin\Release\netcoreapp2.1\Frends.Json.Test.dll`
 
 Create a nuget package
 
-`nuget pack nuspec/Frends.Json.nuspec`
+`dotnet pack Frends.Json`
 
 ## Contributing
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
