@@ -99,7 +99,7 @@ namespace Frends.Json.Test
                 const string template =
                 @"<div><span>{{title}}</span> <strong>{{name}}</strong></div>";
                 var result = Json.Handlebars(new HandlebarInput() { Json = json, HandlebarTemplate = template, HandlebarPartials = new HandlebarPartial[0] });
-                Assert.Contains(result, "<span>Mr.</span> <strong>Andersson</strong>");
+                Assert.Contains("<span>Mr.</span> <strong>Andersson</strong>", result);
             }
 
             [Fact]
@@ -110,7 +110,7 @@ namespace Frends.Json.Test
                 @"<div><span>{{title}}</span> {{> strongName}}</div>";
                 var partials = new[] { new HandlebarPartial { Template = "<strong>{{name}}</strong>", TemplateName = "strongName" } };
                 var result = Json.Handlebars(new HandlebarInput() { Json = json, HandlebarTemplate = template, HandlebarPartials = partials });
-                Assert.Contains(result, "<span>Mr.</span> <strong>Andersson</strong>");
+                Assert.Contains("<span>Mr.</span> <strong>Andersson</strong>", result);
             }
 
             const string ValidUserJson = @"{
