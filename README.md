@@ -31,16 +31,19 @@
 You can install the task via FRENDS UI Task view, by searching for packages. You can also download the latest NuGet package from https://www.myget.org/feed/frends/package/nuget/Frends.Json and import it manually via the Task view.
 
 ## Building
+Requirements
+
+`NET Core SDK 2.1 or later`
+
 Clone a copy of the repo
 
 `git clone https://github.com/FrendsPlatform/Frends.Json.git`
-
 
 Restore dependencies
 
 `dotnet restore`
 
-Rebuild the project
+Build the solution
 
 `dotnet build`
 
