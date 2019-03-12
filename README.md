@@ -1,15 +1,29 @@
-- [Frends.Json](#frends.json)
-   - [Installing](#installing)
-   - [Building](#building)
-   - [Contributing](#contributing)
-   - [Documentation](#documentation)
-     - [Json.Query](#jsonquery) 
-     - [Json.QuerySingle](#jsonquerysingle)
-     - [Json.Handlebars](#jsonhandlebars)
-     - [Json.Validate](#jsonvalidate)
-     - [Json.ConvertXmlStringToJToken](#jsonconvertxmlstringtojtoken)
-     - [Json.ConvertJsonStringToJToken](#jsonconvertjsonstringtojtoken)
-   - [License](#license)
+- [Frends.Json](#frendsjson)
+  - [Installing](#installing)
+  - [Building](#building)
+  - [Contributing](#contributing)
+  - [Documentation](#documentation)
+    - [Json.Query](#jsonquery)
+      - [Input](#input)
+      - [Options](#options)
+      - [Result](#result)
+    - [Json.QuerySingle](#jsonquerysingle)
+      - [Input](#input-1)
+      - [Options](#options-1)
+      - [Result](#result-1)
+    - [Json.Handlebars](#jsonhandlebars)
+      - [Input](#input-2)
+      - [Result](#result-2)
+    - [Json.Validate](#jsonvalidate)
+      - [Input](#input-3)
+      - [Result](#result-3)
+    - [Json.ConvertXmlStringToJToken](#jsonconvertxmlstringtojtoken)
+      - [Input](#input-4)
+      - [Result](#result-4)
+    - [Json.ConvertJsonStringToJToken](#jsonconvertjsonstringtojtoken)
+      - [Input](#input-5)
+      - [Result](#result-5)
+  - [License](#license)
 
 # Frends.Json
 
@@ -24,17 +38,19 @@ Clone a copy of the repo
 
 Restore dependencies
 
-`nuget restore frends.json`
+`dotnet restore`
 
 Rebuild the project
 
-Run Tests with nunit3. Tests can be found under
+`dotnet build`
 
-`Frends.Json.Tests\bin\Release\Frends.Json.Tests.dll`
+Run Tests
+
+`dotnet test Frends.Json.Test`
 
 Create a nuget package
 
-`nuget pack nuspec/Frends.Json.nuspec`
+`dotnet pack Frends.Json`
 
 ## Contributing
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
