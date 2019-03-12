@@ -1,15 +1,29 @@
-- [Frends.Json](#frends.json)
-   - [Installing](#installing)
-   - [Building](#building)
-   - [Contributing](#contributing)
-   - [Documentation](#documentation)
-     - [Json.Query](#jsonquery) 
-     - [Json.QuerySingle](#jsonquerysingle)
-     - [Json.Handlebars](#jsonhandlebars)
-     - [Json.Validate](#jsonvalidate)
-     - [Json.ConvertXmlStringToJToken](#jsonconvertxmlstringtojtoken)
-     - [Json.ConvertJsonStringToJToken](#jsonconvertjsonstringtojtoken)
-   - [License](#license)
+- [Frends.Json](#frendsjson)
+  - [Installing](#installing)
+  - [Building](#building)
+  - [Contributing](#contributing)
+  - [Documentation](#documentation)
+    - [Json.Query](#jsonquery)
+      - [Input](#input)
+      - [Options](#options)
+      - [Result](#result)
+    - [Json.QuerySingle](#jsonquerysingle)
+      - [Input](#input-1)
+      - [Options](#options-1)
+      - [Result](#result-1)
+    - [Json.Handlebars](#jsonhandlebars)
+      - [Input](#input-2)
+      - [Result](#result-2)
+    - [Json.Validate](#jsonvalidate)
+      - [Input](#input-3)
+      - [Result](#result-3)
+    - [Json.ConvertXmlStringToJToken](#jsonconvertxmlstringtojtoken)
+      - [Input](#input-4)
+      - [Result](#result-4)
+    - [Json.ConvertJsonStringToJToken](#jsonconvertjsonstringtojtoken)
+      - [Input](#input-5)
+      - [Result](#result-5)
+  - [License](#license)
 
 # Frends.Json
 
@@ -25,13 +39,17 @@ Clone a copy of the repo
 
 `git clone https://github.com/FrendsPlatform/Frends.Json.git`
 
+Restore dependencies
+
+`dotnet restore`
+
 Build the solution
 
 `dotnet build`
 
-Run Tests with xUnit. Tests can be found under
+Run Tests
 
-`Frends.Json.Test\bin\Release\netcoreapp2.1\Frends.Json.Test.dll`
+`dotnet test Frends.Json.Test`
 
 Create a nuget package
 
