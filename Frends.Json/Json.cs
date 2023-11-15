@@ -68,7 +68,7 @@ namespace Frends.Json
         /// <summary>
         /// Validate your json with Json.NET Schema. See http://www.newtonsoft.com/jsonschema and https://github.com/FrendsPlatform/Frends.Json
         /// </summary>
-        /// <returns>Object { bool IsValid, string Error }</returns>
+        /// <returns>Object { bool IsValid, List<string> Errors }</returns>
         public static ValidateResult Validate([PropertyTab]ValidateInput input, [PropertyTab] ValidateOption options)
         {
             IList<string> errors;
