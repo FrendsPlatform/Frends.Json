@@ -1,3 +1,6 @@
+> [!WARNING]
+> **Legacy tasks — do not use in new projects.** The tasks in this repository are part of Frends legacy task library. For current, supported tasks visit [tasks.frends.com](https://tasks.frends.com).
+
 - [Frends.Json](#frendsjson)
   - [Installing](#installing)
   - [Building](#building)
