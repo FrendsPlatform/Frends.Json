@@ -1,5 +1,5 @@
 > [!WARNING]
-> # ⚠️ DEPRECATED REPOSITORY
+> # DEPRECATED REPOSITORY
 > **Notice:** This repository is no longer actively maintained.
 > ### 🚀 Migration
 > Please use the updated repository for new projects and updates:
