@@ -1,5 +1,12 @@
 > [!WARNING]
-> **Legacy tasks — do not use in new projects.** The tasks in this repository are part of Frends legacy task library. For current, supported tasks visit [tasks.frends.com](https://tasks.frends.com).
+> # ⚠️ DEPRECATED REPOSITORY
+> **Notice:** This repository is no longer actively maintained.
+> ### 🚀 Migration
+> Please use the updated repository for new projects and updates:
+> 👉 **[FrendsPlatform / Frends.JSON2](https://github.com/FrendsPlatform/Frends.JSON2)**
+>
+>---
+>*For all actively supported tasks, visit [tasks.frends.com](https://tasks.frends.com).*
 
 - [Frends.Json](#frendsjson)
   - [Installing](#installing)
